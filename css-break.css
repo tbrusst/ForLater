@@ -1,0 +1,207 @@
+@font-face {
+  font-family: 'Playfair Display';
+  src:  url('fonts/PlayfairDisplay-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src:  url('fonts/Oswald-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+
+}
+
+@media only screen and (max-width: 500px){
+  body {
+    overflow: hidden;
+  }
+
+
+.full {
+  width: 100vw;
+  height: 100vh;
+  background: url(img/bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.content {
+  display: none;
+}
+
+.close {
+  padding: 1vh;
+  width: 10vw;
+}
+.close svg {
+  padding: 1vh;
+  width: 10vw;
+}
+
+.clock {
+  width: 100vw;
+}
+
+.topclock{
+  position: relative;
+  width: 100%;
+  /*left: 5vw;*/
+  top: 5vh;
+}
+
+.topclock h1{
+  position: absolute;
+  display: inline;
+  font-family: 'Oswald';
+  font-weight: 700;
+  font-size: 6rem;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+}
+
+#second {
+  left: 45vw;
+}
+
+.botclock{
+  position: absolute;
+  width: 100%;
+  left: 5vw;
+  top: 39vh;
+}
+
+.botclock p{
+  position: absolute;
+  display: inline;
+  font-family: 'Oswald';
+  font-size: 1.4rem;
+  margin: 0;
+  width: 45%;
+  text-align: center;
+  color: white;
+}
+
+#second2{
+  left: 45vw;
+}
+
+.start {
+  position: relative;
+  top: 45vh;
+  width: 65%;
+  margin: 0 auto;
+}
+
+}
+
+
+@media only screen and (min-width: 500px){
+  body {
+    overflow: hidden;
+  }
+  .full{
+    display: none;
+  }
+
+  .output {
+		background:url(img/lizard.png);
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-size: 50%;
+		margin: 10px 0px 0px 0px;
+	}
+  @keyframes one {
+  	0%   {opacity: 0;}
+  	20%   {opacity: 1;}
+  	100%  {opacity: 1;}
+  }
+  @keyframes two {
+  	0%   {opacity: 0;}
+  	40%   {opacity: 1;}
+  	100%  {opacity: 1;}
+  }
+  @keyframes three {
+  	0%   {opacity: 0;}
+  	60%   {opacity: 1;}
+  	100%  {opacity: 1;}
+  }
+  @keyframes four {
+  	0%   {opacity: 0;}
+  	80%   {opacity: 1;}
+  	100%  {opacity: 1;}
+  }
+  @keyframes five {
+  	0%   {opacity: 0;}
+  	100%  {opacity: 1;}
+  }
+
+	#o1 {
+		background-color: #FFCDB2 ;
+		animation-name: one;
+		animation-duration: 4s;
+	}
+	#o2 {
+		background-color: #FFB4A2 ;
+		animation-name: two;
+		animation-duration: 4s;
+	}
+	#o3 {
+		background-color: #E5989B ;
+		animation-name: three;
+		animation-duration: 4s;
+	}
+	#o4 {
+		background-color: #B5838D ;
+		animation-name: four;
+		animation-duration: 4s;
+	}
+	#o5 {
+		background-color: #6D6875;
+		animation-name: five;
+		animation-duration: 4s;
+	}
+
+	#content {
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	.brick {
+		width:20%;
+		height: 100%;
+
+		transition: all 1s ease-in-out;
+
+
+
+	}
+	.output {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		animation-name: five;
+		animation-duration: 6s;
+
+	}
+	.output:after {
+		color: black;
+		font-family: 'Playfair Display', serif;
+		font-weight: bold;
+		font-size: 3.3rem;
+		content: 'Whoops, Wrong Way';
+
+    text-shadow: 0px 0px 18px rgba(150, 150, 150, 0.54);
+
+	}
+
+
+
+}

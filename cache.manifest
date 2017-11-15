@@ -1,0 +1,37 @@
+CACHE MANIFEST
+# version - 01
+
+CACHE:
+
+# CSS
+css-add2home.css
+css-main.css
+css-break.css
+css-normalize.css
+
+# IMAGES
+img/152.png
+img/144.png
+img/76.png
+img/72.png
+img/180.png
+img/114.png
+img/57.png
+img/bg.png
+
+# HTML FILES
+index.html
+break.html
+
+# JAVASCRIPT - SPECIFIC ORDER
+js-refresh-manifest.js
+js-add2home.js
+js-main.js
+js-break.js
+
+# FONTS
+fonts/PlayfairDisplay-Black.ttf
+fonts/Oswald-Regular.ttf
+
+## Any resources not listed above will require the user to be online.
+NETWORK:

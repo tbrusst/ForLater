@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+
+<head>
+
+	<title>Maybe Later</title>
+	<!-- META -->
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- title and un detect phone numbers in app -->
+	<meta name="apple-mobile-web-app-title" content="Maybe Later">
+	<meta name="format-detection" content="telephone=no">
+
+
+
+
+<!-- ipad icons -->
+	<link href="img/152.png" size="152x152" rel="apple-touch-icon">
+	<link href="img/144.png" size="144x144" rel="apple-touch-icon">
+	<link href="img/76.png" size="76x76" rel="apple-touch-icon">
+	<link href="img/72.png" size="72x72" rel="apple-touch-icon">
+
+<!-- iphone icons -->
+	<link href="img/180.png" size="180x180" rel="apple-touch-icon">
+	<link href="img/114.png" size="114x114" rel="apple-touch-icon">
+	<link href="img/57.png" size="57x57" rel="apple-touch-icon">
+
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="css-normalize.css">
+	<link rel="stylesheet" href="css-add2home.css">
+	<link rel="stylesheet" href="css-main.css">
+
+
+	<!-- prevent text size change on orientation change -->
+		<style>
+			html{
+				-webkit-text-size-adjust: 100%;
+			}
+		</style>
+</head>
+
+<body>
+	<!-- PAGE CONTENT -->
+  <div class="full" id="full">
+
+
+    <div class="topBar">
+
+      <div class="addbutton" id="addButton">
+        <svg id="svgAdd"style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="black" d="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z" />
+        </svg>
+        <svg id="svgCancel"style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="black" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
+        </svg>
+
+      </div>
+
+      <h1 id="title">Tasks</h1>
+
+      <div class="editbutton" id="editButton">
+        <svg id="svgEdit"style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="#000000" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
+        </svg>
+
+        <svg id="svgCheck"style="width:24px;height:24px" viewBox="0 0 24 24">
+          <path fill="#000000" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+        </svg>
+
+				<svg id="svgTrash"style="width:24px;height:24px" viewBox="0 0 24 24">
+    			<path fill="#000000" d="M21.03,3L18,20.31C17.83,21.27 17,22 16,22H8C7,22 6.17,21.27 6,20.31L2.97,3H21.03M5.36,5L8,20H16L18.64,5H5.36M9,18V14H13V18H9M13,13.18L9.82,10L13,6.82L16.18,10L13,13.18Z" />
+				</svg>
+      </div>
+    </div>
+
+
+    <div class="tasklist" id="tasklist">
+
+      <div class="task">
+        <div class="taskcheck">
+          <svg id="task" class="showCheck theCheck"viewBox="0 0 24 24">
+            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+          </svg>
+        </div>
+        <div class="taskbody">
+          <h3 class="taskText">Create color scheme</h3>
+        </div>
+      </div>
+
+      <div class="task">
+        <div class="taskcheck">
+          <svg id="task" class="showCheck theCheck"viewBox="0 0 24 24">
+            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+          </svg>
+        </div>
+        <div class="taskbody">
+          <h3 class="taskText">Build wireframes</h3>
+        </div>
+      </div>
+
+      <div class="task">
+        <div class="taskcheck">
+          <svg id="task" class="showCheck theCheck"viewBox="0 0 24 24">
+            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+          </svg>
+        </div>
+        <div class="taskbody">
+          <h3 class="taskText">Load fonts</h3>
+        </div>
+      </div>
+
+      <div class="task">
+        <div class="taskcheck">
+          <svg id="task" class="showCheck theCheck"viewBox="0 0 24 24">
+            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
+          </svg>
+        </div>
+        <div class="taskbody">
+          <h3 class="taskText">Take a break</h3>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <div class="breakbutton" onclick="jmp2LocalPage('break.html')">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38 565 299 81">
+        <defs>
+          <style>
+            .cls-1 {
+              fill: url(#linear-gradient);
+            }
+
+            .cls-2 {
+              fill: #192a51;
+              font-size: 25px;
+              font-family: PlayfairDisplay-Black, Playfair Display;
+              font-weight: 800;
+            }
+
+            .cls-3 {
+              filter: url(#Rectangle_163);
+            }
+          </style>
+          <linearGradient id="linear-gradient" x1="0.656" y1="-2.148" x2="0.48" y2="2.654" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#949ed5"/>
+            <stop offset="1" stop-color="#e1f5fe"/>
+          </linearGradient>
+          <filter id="Rectangle_163" x="38" y="565" width="299" height="81" filterUnits="userSpaceOnUse">
+            <feOffset dy="3" input="SourceAlpha"/>
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feFlood flood-opacity="0.161"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+          </filter>
+        </defs>
+        <g id="breakbutton" transform="translate(0 -16)">
+          <g class="cls-3" transform="matrix(1, 0, 0, 1, 0, 16)">
+            <rect id="Rectangle_163-2" data-name="Rectangle 163" class="cls-1" width="281" height="63" transform="translate(47 571)"/>
+          </g>
+          <text id="Take_a_Break" data-name="Take a Break" class="cls-2" transform="translate(112 628)"><tspan x="0" y="0">Take A Break</tspan></text>
+        </g>
+      </svg>
+
+    </div>
+
+  </div>
+
+	<div id="content">
+		<div class="output"></div>
+		<div id="o1"class="brick"></div>
+		<div id="o2"class="brick"></div>
+
+		<div id="o3"class="brick"></div>
+		<div id="o4"class="brick"></div>
+		<div id="o5"class="brick"></div>
+	</div>
+	<!-- JAVASCRIPT-->
+	<script src="js-refresh-manifest.js"></script>
+
+	<script type="text/javascript" charset="utf-8"> //customize config variable Before addToHome.js
+		var addToHomeConfig = {
+			touchIcon: true
+		}
+	</script>
+	<script src="js-add2home.js"></script>
+
+
+	<script src="js-main.js"></script>
+</body>
+
+</html>

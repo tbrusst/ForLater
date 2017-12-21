@@ -44,9 +44,10 @@
 		</style>
 </head>
 
-<body>
+<body onload="readData();">
 	<!-- PAGE CONTENT -->
   <div class="full" id="full">
+
 
 
     <div class="topBar">
@@ -80,57 +81,67 @@
 
 
     <div class="tasklist" id="tasklist">
+        <p class="introText">
+            Welcome to Maybe Later!
+            
 
-      <div class="task">
-        <div class="taskcheck">
-          <svg id="task" class="showCheck theCheck"viewBox="0 0 24 24">
-            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
-          </svg>
+        </p>
+
+        <p class="introText">
+
+            You currently have no tasks listed.
+            <br>
+            Create a task by tapping <strong>+</strong> in the top left.
+            <br>
+
+        </p>
+
+        <p class="introText">
+
+            
+            
+            Science shows that 17 minute breaks are most effective.
+            <br>
+            Don't forget to <strong>Take A Break</strong> by tapping below.
+            
+            
+        </p>
+<!-- 
+        <p class="introText">
+          Enjoy!
+        </p> -->
+
+      <div class="taskz">
+        <div class="taskcheckz">
+          <input type="checkbox" class="taskcheckboxz" id="task" name="subscribe">
+					<label for="tasks"></label>
         </div>
         <div class="taskbody">
-          <h3 class="taskText">Create color scheme</h3>
+          <h3 class="taskText">Example Task</h3>
         </div>
       </div>
 
-      <div class="task">
-        <div class="taskcheck">
-          <svg id="task" class="showCheck theCheck"viewBox="0 0 24 24">
-            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
-          </svg>
-        </div>
-        <div class="taskbody">
-          <h3 class="taskText">Build wireframes</h3>
-        </div>
-      </div>
+			<template class="taskTemplate"id="taskTemplate">
+				<div class="task">
+	        <div class="taskcheck" >
+	          <input type="checkbox" class="taskcheckbox" id="task" name="subscribe" >
+						<label for="tasks"></label>
+	        </div>
+	        <div class="taskbody">
+	          <h3 class="taskText textNode"  onkeypress="return (this.innerText.length >= 28 ? false : true )">Create color scheme</h3>
+	        </div>
+	      </div>
+			</template>
 
-      <div class="task">
-        <div class="taskcheck">
-          <svg id="task" class="showCheck theCheck"viewBox="0 0 24 24">
-            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
-          </svg>
-        </div>
-        <div class="taskbody">
-          <h3 class="taskText">Load fonts</h3>
-        </div>
-      </div>
 
-      <div class="task">
-        <div class="taskcheck">
-          <svg id="task" class="showCheck theCheck"viewBox="0 0 24 24">
-            <path d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z" />
-          </svg>
-        </div>
-        <div class="taskbody">
-          <h3 class="taskText">Take a break</h3>
-        </div>
-      </div>
+
 
 
 
     </div>
 
     <div class="breakbutton" onclick="jmp2LocalPage('break.html')">
-      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38 565 299 81">
+      <svg id="breakButton"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38 565 299 81">
         <defs>
           <style>
             .cls-1 {
@@ -193,6 +204,7 @@
 
 
 	<script src="js-main.js"></script>
+	<script src="js-storage.js"></script>
 </body>
 
 </html>

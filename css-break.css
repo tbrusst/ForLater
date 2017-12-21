@@ -16,14 +16,95 @@
   }
 
 
-.full {
-  width: 100vw;
-  height: 100vh;
-  background: url(img/bg.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
+  body {
+    width: 100vw;
+    height: 90vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #fce38a, #f38181 ,#c5d5ee, #949fd3);
+    background-size: 500% 500%;
+
+  }
+
+  .body1{
+    -webkit-animation: Gradient 5s ease forwards;
+    -moz-animation: Gradient 5s ease forwards;
+    animation: Gradient 5s ease forwards;
+  }
+
+  .body2{
+    -webkit-animation: GradientBack 5s ease forwards;
+    -moz-animation: GradientBack 5s ease forwards;
+    animation: GradientBack 5s ease forwards;
+  }
+  
+  @-webkit-keyframes Gradient {
+    0% {
+      background-position: 0% 0%
+    }
+    100% {
+      background-position: 100% 50%
+    }
+  }
+  
+  @-moz-keyframes Gradient {
+    0% {
+      background-position: 0% 0%
+    }
+    100% {
+      background-position: 100% 50%
+    }
+  }
+  
+  @keyframes Gradient {
+    0% {
+      background-position: 0% 0%
+    }
+    100% {
+      background-position: 100% 50%
+    }
+  }
+
+
+  @-webkit-keyframes GradientBack {
+    0% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 0%
+    }
+  }
+  
+  @-moz-keyframes GradientBack {
+    0% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 0%
+    }
+  }
+  
+  @keyframes GradientBack {
+    0% {
+      background-position: 100% 50%
+    }
+    100% {
+      background-position: 0% 0%
+    }
+  }
+
+
+  /* #c5d5ee, #949fd3
+
+
+  #ab64f6, #61dbf7
+
+
+  #fce38a, #f38181 */
+  
+
+
+
+
 .content {
   display: none;
 }
@@ -31,6 +112,7 @@
 .close {
   padding: 1vh;
   width: 10vw;
+  transition: 2s ease-in-out;
 }
 .close svg {
   padding: 1vh;
@@ -60,15 +142,12 @@
   color: white;
 }
 
-#second {
-  left: 45vw;
-}
 
 .botclock{
   position: absolute;
   width: 100%;
   left: 5vw;
-  top: 39vh;
+  top: 34vh;
 }
 
 .botclock p{
@@ -77,13 +156,13 @@
   font-family: 'Oswald';
   font-size: 1.4rem;
   margin: 0;
-  width: 45%;
+  width: 62%;
   text-align: center;
   color: white;
 }
 
 #second2{
-  left: 45vw;
+  left: 30vw;
 }
 
 .start {
@@ -205,3 +284,114 @@
 
 
 }
+
+
+
+
+
+/* not active timer */
+.innerCircle{
+  animation: 1s fadeIn ease-in;
+}
+
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.startText{
+  animation: 3s startIn ease-in;
+}
+
+@keyframes startIn{
+  0%{
+    opacity: 0;
+  
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+.ell5 {
+  animation: 30s ell5 infinite;
+}
+
+@keyframes ell5 {
+  0% {
+    stroke-dashoffset: -500;
+    stroke-dasharray: 100;
+    stroke-width: 1;
+    
+  }
+  100% {
+    stroke-dashoffset: 500;
+    stroke-dasharray: 100;
+    stroke-width: 1;
+  }
+}
+
+.ell4 {
+  animation: 30s ell4 infinite;
+  
+}
+
+@keyframes ell4 {
+  0% {
+    stroke-dashoffset: 500;
+    stroke-dasharray: 100;
+    stroke-width: 1;
+    
+  }
+  100% {
+    stroke-dashoffset: -500;
+    stroke-dasharray: 100;
+    stroke-width: 1;
+  }
+}
+
+
+/* for active timer */
+.ell5run {
+  animation: 10s ell5run infinite;
+}
+
+@keyframes ell5run {
+  0% {
+    stroke-dashoffset: -500;
+    stroke-dasharray: 100;
+    stroke-width: 1;
+    
+  }
+  100% {
+    stroke-dashoffset: 500;
+    stroke-dasharray: 100;
+    stroke-width: 1;
+  }
+}
+
+.ell4run {
+  animation: 10s ell4run infinite;
+  
+}
+
+@keyframes ell4run {
+  0% {
+    stroke-dashoffset: 500;
+    stroke-dasharray: 100;
+    stroke-width: 1;
+    
+  }
+  100% {
+    stroke-dashoffset: -500;
+    stroke-dasharray: 100;
+    stroke-width: 1;
+  }
+}
+
+

@@ -34,8 +34,6 @@
 	<link rel="stylesheet" href="css-normalize.css">
 	<link rel="stylesheet" href="css-add2home.css">
 	<link rel="stylesheet" href="css-break.css">
-	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 	<!-- prevent text size change on orientation change -->
 		<style>
@@ -45,10 +43,10 @@
 		</style>
 </head>
 
-<body>
+<body id="bodyayo" class="">
 	<!-- PAGE CONTENT -->
-  <div class="full">
-    <div class="close" onclick="jmp2LocalPage('index.html')">
+  <div class="full preGradient" id="breakBG">
+    <div class="close" id="close" onclick="jmp2LocalPage('index.html')">
       <svg style="width:24px;height:24px" viewBox="0 0 24 24">
         <path fill="#ffffff" d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" />
       </svg>
@@ -58,15 +56,15 @@
     <div class="timer">
       <div class="clock">
         <div class="topclock">
-          <h1 id="minute">17 00</h1>
+          <h1 id="time_left"></h1>
         </div>
         <div class="botclock">
-          <p>Minutes</p><p id="second2">Seconds</p>
+          <p id="reset">Minutes</p><p id="second2">Seconds</p>
         </div>
       </div>
     </div>
 
-    <div class="start">
+    <div class="start" id="playpause">
       <svg id="svgStart"xmlns="http://www.w3.org/2000/svg" viewBox="1425.115 304.115 207.771 207.771">
         <defs>
           <style>
@@ -96,17 +94,17 @@
         </defs>
         <g id="start" transform="translate(1340 -90)">
           <g id="Group_286" data-name="Group 286" transform="translate(37.115 37.115)">
-            <g id="Ellipse_5" data-name="Ellipse 5" class="cls-1" transform="translate(48 357)">
+            <g id="Ellipse_5" data-name="Ellipse 5" class="cls-1 ell5" transform="translate(48 357)">
               <circle class="cls-4" cx="103.885" cy="103.885" r="103.885"/>
               <circle class="cls-5" cx="103.885" cy="103.885" r="103.385"/>
             </g>
-            <g id="Ellipse_4" data-name="Ellipse 4" class="cls-1" transform="translate(67.893 376.893)">
+            <g id="Ellipse_4" data-name="Ellipse 4" class="cls-1 ell4" transform="translate(67.893 376.893)">
               <circle class="cls-4" cx="83.992" cy="83.992" r="83.992"/>
               <circle class="cls-5" cx="83.992" cy="83.992" r="83.492"/>
             </g>
           </g>
-          <path id="Path_82" data-name="Path 82" class="cls-2" d="M66,2.5A63.5,63.5,0,1,1,2.5,66,63.5,63.5,0,0,1,66,2.5Z" transform="translate(122 432)"/>
-          <text id="Start-2" data-name="Start" class="cls-3" transform="translate(153 510)"><tspan x="0" y="0">Start</tspan></text>
+          <path id="Path_82" data-name="Path 82" class="cls-2 innerCircle" d="M66,2.5A63.5,63.5,0,1,1,2.5,66,63.5,63.5,0,0,1,66,2.5Z" transform="translate(122 432)"/>
+          <text id="Start-2" data-name="Start" class="cls-3 startText" transform="translate(153 510)"><tspan id="Start-1" x="0" y="0">Start</tspan></text>
         </g>
       </svg>
 
@@ -137,8 +135,9 @@
 	</script>
 	<script src="js-add2home.js"></script>
 
-
+	<script src="js-breakstore.js"></script>
 	<script src="js-break.js"></script>
+
 </body>
 
 </html>

@@ -10,6 +10,7 @@ css-break.css
 css-normalize.css
 
 # IMAGES
+img/lizard.png
 img/152.png
 img/144.png
 img/76.png
@@ -28,6 +29,8 @@ js-refresh-manifest.js
 js-add2home.js
 js-main.js
 js-break.js
+js-storage.js
+js-breakstore.js
 
 # FONTS
 fonts/PlayfairDisplay-Black.ttf
